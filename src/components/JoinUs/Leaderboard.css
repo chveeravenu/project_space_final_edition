@@ -1,0 +1,136 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #0f172a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Container */
+.leaderboard-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0f172a;
+}
+
+/* Title */
+.leaderboard-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #854ce6;
+  text-align: center;
+}
+
+/* Table */
+.table-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: auto;
+  background: #1d2735;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.leaderboard-table th {
+  background: #263043;
+  color: #9d6ff1;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.leaderboard-table td {
+  color: #ffffff;
+  background-color: #1d2735;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #2f3b4a;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #222c3c;
+}
+
+.leaderboard-table tr:hover {
+  background-color: #2e374a;
+  transition: background 0.3s ease;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  background: #1d2735;
+  color: #ffffff;
+  border: 1px solid #854ce6;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover,
+.pagination button.active {
+  background: #854ce6;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3f4e64;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0f172a;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .leaderboard-title {
+    font-size: 2rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .pagination button {
+    padding: 0.4rem 0.8rem;
+  }
+}

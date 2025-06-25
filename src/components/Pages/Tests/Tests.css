@@ -1,0 +1,136 @@
+.tests-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.technology-section {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.tech-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tech-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.tech-name {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.tech-description {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.tech-category {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+/* Category-specific colors */
+.tech-card[data-category="Language"] .tech-category {
+  background: #e74c3c;
+}
+.tech-card[data-category="Frontend"] .tech-category {
+  background: #9b59b6;
+}
+.tech-card[data-category="Backend"] .tech-category {
+  background: #3498db;
+}
+.tech-card[data-category="Database"] .tech-category {
+  background: #f39c12;
+}
+.tech-card[data-category="DevOps"] .tech-category {
+  background: #16a085;
+}
+.tech-card[data-category="Cloud"] .tech-category {
+  background: #d35400;
+}
+.tech-card[data-category="OS"] .tech-category {
+  background: #2c3e50;
+}
+.tech-card[data-category="Tools"] .tech-category {
+  background: #7f8c8d;
+}
+.tech-card[data-category="API"] .tech-category {
+  background: #27ae60;
+}
+.tech-card[data-category="AI/ML"] .tech-category {
+  background: #8e44ad;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .technology-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .tech-card {
+    padding: 1.2rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+}
