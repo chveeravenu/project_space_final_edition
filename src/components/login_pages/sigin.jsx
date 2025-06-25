@@ -21,7 +21,7 @@ const Signin = () => {
     // if (!stored) return alert('User not found!');
     // const user = JSON.parse(stored);
     if (form.email === "admin@gmail.com"){
-      localStorage.setItem('loginuser',form.email)
+      // localStorage.setItem('loginuser',form.email)
       window.location.href = "https://admin-dash-nine-pied.vercel.app/";
     }
     else{
