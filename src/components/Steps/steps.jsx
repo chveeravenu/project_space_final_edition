@@ -41,6 +41,7 @@ const Steps = forwardRef((props, ref) => {
     else if (step.title === 'Resume Tracker') navigate('/resumec');
     else if (step.title === 'Practice') navigate('/practice')
   };
+      
 
   return (
     <div className='steps-section'>
