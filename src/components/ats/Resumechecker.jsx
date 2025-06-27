@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Upload, FileText, BarChart3, Loader2 } from 'lucide-react';
-import './ResumeChecker.css'; // Use your actual CSS file name
+import './Resumechecker.css'; // Use your actual CSS file name
 
 function App() {
   const [resumeFile, setResumeFile] = useState(null);
