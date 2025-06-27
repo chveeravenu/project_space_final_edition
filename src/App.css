@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   flex : 1;
+  
 }
 
 .app {
@@ -16,6 +17,6 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 2rem;
-  background-color: #0F0F0F;
+  /* padding: 2rem; */
+  background-color: #0B0B1B;
 }

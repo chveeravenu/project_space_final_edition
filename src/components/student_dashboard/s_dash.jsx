@@ -2,21 +2,28 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ScoreSummary from './ScoreSummary';
 import './Dashboard.css';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {
   const [student, setStudent] = useState(null);
+  const [logi,setLogi] = useState(false)
   const email = localStorage.getItem('loginuser');
   console.log(email)
 
   useEffect(() => {
     if (!email) return;
+    if(!(localStorage.getItem("loginuser")===null)){
+      setLogi(true)
+    }
     axios
       .post('https://projectspace-backend.onrender.com/get-student-by-email', { email })
       .then((res) => setStudent(res.data))
       .catch(console.error);
   }, [email]);
 
-  if (!student) return <div className="loading">Loading...</div>;
+
+
+  if (!student) return (logi ? <div className="loading">Loading...</div> : <div className="loading">sigin to dashboard</div>)
 
   return (
     <div className="student-dashboard">
@@ -28,10 +35,10 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="main-content">
+      <div className="main-content12">
 
         {/* Coding Contests */}
-        <section className="section">
+        <section className="section123">
           <h1>Coding Contests</h1>
           {student.codingContestsTaken.length === 0 ? (
             <p className="empty-msg">You haven't taken any coding contests yet.</p>
@@ -49,7 +56,7 @@ const Dashboard = () => {
         </section>
 
         {/* AI Interviews */}
-        <section className="section">
+        <section className="section123">
           <h1>AI Interviews</h1>
           {student.aiMockInterviewsTaken.length === 0 ? (
             <p className="empty-msg">You haven't taken any AI interviews yet.</p>
@@ -67,7 +74,7 @@ const Dashboard = () => {
         </section>
 
         {/* MCQ Tests */}
-        <section className="section">
+        <section className="section123">
           <h1>MCQ Tests</h1>
           {student.mcqTestsTaken.length === 0 ? (
             <p className="empty-msg">You haven't taken any MCQ tests yet.</p>

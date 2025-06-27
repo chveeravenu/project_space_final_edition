@@ -1,0 +1,129 @@
+.container.c1 {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.c2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.c3 {
+  text-align: center;
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.c4 {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #e2e8f0;
+}
+
+.c5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  color: white;
+  background: transparent;
+}
+
+.c6 {
+  width: 100%;
+  padding: 10px;
+  min-height: 120px;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.c7 {
+  width: 100%;
+  background-color: #1d4ed8;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.c7:hover {
+  background-color: #2563eb;
+}
+
+.c7:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
+
+.c8 {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  padding: 10px;
+  border: 1px solid #f87171;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.c9 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.c10 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.c11 {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

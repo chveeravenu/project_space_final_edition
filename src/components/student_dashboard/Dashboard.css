@@ -3,33 +3,37 @@
    Modern Theme: #C535AE, #854CE6
 =========================== */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 
 .student-dashboard {
-  background: linear-gradient(to right, #fce4f9, #f1e4fc);
+  /* background: linear-gradient(to right, #fce4f9, #f1e4fc); */
   color: #1f2937;
-  width: 100%;
+  /* background-color: red; */
+  flex: 1;
+  /* width: 100%; */
   min-height: 100vh;
   overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 
 .dashboard-container {
-  width: 100%;
-  padding: 2rem clamp(1rem, 5vw, 3rem);
+  width: 70%;
+  /* padding: 2rem clamp(1rem, 5vw, 3rem); */
   box-sizing: border-box;
 
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
 }
 
 .profile-banner {
@@ -37,9 +41,10 @@
   color: white;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 2rem;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 2rem;
+  width: 90%;
+  margin-bottom: 2rem;  
 }
 
 .profile-info h2 {
@@ -52,21 +57,28 @@
   margin-top: 0.5rem;
 }
 
-.section {
+.section123 {
   margin-bottom: 2.5rem;
-  background: #ffffff;
+  background: #1D2735;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
-.section h1 {
+.section123 h1 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color: #C535AE;
   font-weight: 600;
   border-bottom: 2px solid #854CE6;
   padding-bottom: 0.5rem;
+}
+
+.section123 {
+  width: 44%;
+  height: 300px;
+  overflow-y: scroll;
+
 }
 
 .card-container {
@@ -122,6 +134,17 @@
   margin-bottom: 2rem;
 }
 
+.main-content12{
+  width: 140%;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
 .summary-container {
   display: flex;
   justify-content: space-around;
@@ -156,6 +179,10 @@
   font-size: 2rem;
   font-weight: bold;
   color: #854CE6;
+}
+
+.empty-msg{
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

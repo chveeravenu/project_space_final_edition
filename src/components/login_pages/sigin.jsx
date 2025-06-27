@@ -22,11 +22,14 @@ const Signin = () => {
     // const user = JSON.parse(stored);
     if (form.email === "admin@gmail.com"){
       // localStorage.setItem('loginuser',form.email)
+      console.log("jksbv")
       window.location.href = "https://admin-dash-nine-pied.vercel.app/";
     }
     else{
+      console.log("asjldv")
     axios.post('https://projectspace-backend.onrender.com/login',{"email":form.email,"password":form.password})
     .then((res) =>{
+      console.log("def")
       alert('Login success!')
       localStorage.setItem('loginuser',form.email)
       navigate('/')

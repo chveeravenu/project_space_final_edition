@@ -4,7 +4,7 @@ import { FiSun, FiMoon } from 'react-icons/fi';
 import './Header.css';
 import logo from '../../assets/logo.png';
 
-const Header = ({ scrollToFooter }) => {
+const Header = ({ scrollToFooter,scrollTosteps }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -46,6 +46,15 @@ const Header = ({ scrollToFooter }) => {
     }, 100);
   };
 
+  const handleContactClic = (e) => {
+  e.preventDefault();
+  navigate('/');
+  setTimeout(() => {
+    scrollTosteps?.(); // ✅
+  }, 100);
+};
+
+
   return (
     <>
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -60,7 +69,7 @@ const Header = ({ scrollToFooter }) => {
             {admin && <li><NavLink to="/stdashboard" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Dashboard</NavLink></li>}
             {/* <li><NavLink to="/contests" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contests</NavLink></li> */}
             <li><NavLink to="/practice" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Practice</NavLink></li>
-            <li><NavLink to="/interviews" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Interviews</NavLink></li>
+            <li><a href="/" onClick={handleContactClic} className="nav-link">interview</a></li>
             <li>
               <a href="/" onClick={handleContactClick} className="nav-link">Contact Us</a>
             </li>

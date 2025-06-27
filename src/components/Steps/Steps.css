@@ -9,12 +9,22 @@
 }
 
 /* Section Container */
+
 .steps-section {
-  background: linear-gradient(135deg, var(--dark-bg) 0%, #0e1120 100%);
+  background-color:#090917 ;
+  /* width: 90%; */
   padding: 5rem 2rem;
   color: var(--text-light);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.steps-section1 {
+  /* border: 1px solid red; */
+  width: 90% !important;
 }
 
 .section-content {

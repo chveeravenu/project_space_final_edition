@@ -200,7 +200,7 @@ const Tests = () => {
 
   return (
     <div className="tests-page">
-      <h1 className="page-title">Technology Stack</h1>
+      {/* <h1 className="page-title">Technology Stack</h1> */}
       
       {categories.map(category => {
         const categoryTechs = technologies.filter(tech => tech.category === category);

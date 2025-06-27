@@ -12,7 +12,7 @@ const ScoreSummary = ({ student }) => {
   const aiAvg = avg(student.aiMockInterviewsTaken);
 
   return (
-    <section className="section">
+    <section className="section123">
       <h1>Performance Summary</h1>
       <div className="summary-container">
         <div className="summary-box">

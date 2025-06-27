@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 
 import hiringAnimation from './animations/hiring.json';
-import Particles from 'react-tsparticles';
+import Particles from '../particles/Particles';
 import { loadSlim } from 'tsparticles-slim'; 
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,73 +38,18 @@ function Main() {
   };
 
   return (
-    <div className="main-container">
+    <div className="main-container1">
       <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={{
-          background: {
-            color: "#0f0f0f",
-          },
-          fpsLimit: 60,
-          particles: {
-            number: {
-              value: 22,
-              density: {
-                enable: true,
-                area: 800,
-              },
-            },
-            shape: {
-              type: 'image',
-              image: [
-                // `{ src: "/Icons/bootstrap-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/css-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/email-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/external-link.svg", width: 20, height: 20 },
-                // { src: "/Icons/github.svg", width: 20, height: 20 },
-                // { src: "/Icons/html-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/instagram.svg", width: 20, height: 20 },
-                // { src: "/Icons/java.svg", width: 20, height: 20 },
-                // { src: "/Icons/js-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/linkedin.svg", width: 20, height: 20 },
-                // { src: "/Icons/mysql-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/node-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/phone-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/python.svg", width: 20, height: 20 },
-                // { src: "/Icons/react-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/sass-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/shopify.svg", width: 20, height: 20 },
-                // { src: "/Icons/typescript-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/vscode-icon.svg", width: 20, height: 20 },
-                // { src: "/Icons/vue-icon.svg", width: 20, height: 20 },
-                `{ src: "/Icons/wordpress.svg", width: 20, height: 20 },`
-              ],
-            },
-            size: {
-              value: 20,
-              random: {
-                enable: true,
-                minimumValue: 15,
-              },
-            },
-            opacity: {
-              value: 0.9,
-            },
-            move: {
-              enable: true,
-              speed: 2.5,
-              direction: "none",
-              random: true,
-              straight: false,
-              outModes: {
-                default: "out",
-              },
-            },
-          },
-          detectRetina: true,
-        }}
-      />
+        particleCount={1000}
+        particleColors={["#ffffff", "#00d1ff", "#8884ff"]}
+        particleSpread={10}
+        moveParticlesOnHover={true}
+        alphaParticles={true}
+        speed={0.1}
+        particleBaseSize={70}
+        sizeRandomness={0.8}
+        className="custom-particles"
+      /> 
 
       <motion.section
         className="hero-section"
